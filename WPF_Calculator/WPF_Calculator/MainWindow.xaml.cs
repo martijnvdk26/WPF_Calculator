@@ -29,6 +29,21 @@ namespace WPF_Calculator
         {
             Application.Current.Shutdown();
         }
+
+        private void Button_7(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_8(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_9(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
   
