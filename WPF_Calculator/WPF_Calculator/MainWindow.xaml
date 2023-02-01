@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="WPF Calculator" Height="400" Width="300">
-    <Grid>
-
+        Title="WPF Calculator" Height="400" Width="325"        >
+    <Grid Background="HotPink">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <MenuItem Header="File">
+                <MenuItem Header="Standard"/>
+                <MenuItem Header="Metrics"/>
+                <MenuItem Header="Degrees"/>
+                <MenuItem Header="Decimal"/>
+                <MenuItem Header="Exchange"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="Exit_Application"/>
+            </MenuItem>
+        </Menu>
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" AcceptsReturn="True" />
     </Grid>
+    
 </Window>
