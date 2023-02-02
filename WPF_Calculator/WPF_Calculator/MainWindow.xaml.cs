@@ -44,6 +44,36 @@ namespace WPF_Calculator
         {
 
         }
+
+        private void Button_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_5(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_6(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
   
