@@ -36,8 +36,16 @@ namespace WPF_Calculator
 
         }
 
+        private void Del_Click(object sender, RoutedEventArgs e)
+        {
+            
 
+        }
     }
 
-  
+
+    
 }
+
+  
+
