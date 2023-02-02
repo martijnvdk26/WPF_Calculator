@@ -30,50 +30,13 @@ namespace WPF_Calculator
             Application.Current.Shutdown();
         }
 
-        private void Button_7(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            
 
         }
 
-        private void Button_8(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void Button_9(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_5(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_3(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 
   
