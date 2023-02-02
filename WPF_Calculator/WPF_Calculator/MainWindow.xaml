@@ -27,20 +27,16 @@
             </MenuItem>
         </Menu>
         <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" AcceptsReturn="True" />
-        <Button Content="7" HorizontalAlignment="Left" Margin="50,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_7"/>
-        <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="50,34,0,0" HorizontalAlignment="Left" Width="250" FontSize="20" Background="Black" Name="tb" Text="">
-            <TextBox.Foreground>
-                <SolidColorBrush Color="Black"/>
-            </TextBox.Foreground>
-        </TextBox>
-        <Button Content="8" HorizontalAlignment="Left" Margin="125,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_8"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="200,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_9"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="50,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_4"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="125,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_5"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="200,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_6"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="50,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_1"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="125,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_2"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="200,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_3"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="50,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="50,34,0,0" HorizontalAlignment="Left" Width="250" FontSize="20" Background="Black" BorderThickness="2" Name="tb" Text=""></TextBox>
+        <Button Content="8" HorizontalAlignment="Left" Margin="125,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="200,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="50,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="125,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="200,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="50,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="125,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="200,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
     </Grid>
     
 
