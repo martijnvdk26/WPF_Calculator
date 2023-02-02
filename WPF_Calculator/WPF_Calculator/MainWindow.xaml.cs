@@ -25,6 +25,7 @@ namespace WPF_Calculator
             InitializeComponent();
         }
 
+        // sluit de app af, wordt gebruikt door de off button en de exit button boven in het menu genaamd rekenmachine
         private void Exit_Application(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
