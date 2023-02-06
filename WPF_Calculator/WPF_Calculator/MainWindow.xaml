@@ -42,8 +42,9 @@
         <Button Content="Del" HorizontalAlignment="Left" Margin="50,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Del_Click"/>
         <Button Content="R" HorizontalAlignment="Left" Margin="125,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="R_Click"></Button>
         <Button Content="Off" HorizontalAlignment="Left" Margin="200,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Height="31" FontSize="18" Click="Exit_Application"></Button>
-        <Button Content="0" HorizontalAlignment="Left" Margin="50,378,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
-        <Button Content="=" HorizontalAlignment="Left" Margin="125,378,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Height="31" FontSize="18" Click="Result_Click"></Button>
+        <Button Content="0" HorizontalAlignment="Left" Margin="50,374,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="125,374,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Height="31" FontSize="18" Click="Result_Click"></Button>
+        <Button Content="+" HorizontalAlignment="Left" Margin="275,374,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="50,34,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="271" FontSize="20" Background="White" BorderThickness="2" x:Name="tb" Text="">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
