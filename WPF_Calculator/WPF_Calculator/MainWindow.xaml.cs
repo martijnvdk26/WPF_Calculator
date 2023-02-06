@@ -108,6 +108,12 @@ namespace WPF_Calculator
                 tb.Text += "=" + (op1 / op2);
             }
         }
+        private void Stats_Window(object sender, RoutedEventArgs e)
+        {
+            StatsWindow statsWindow = new StatsWindow();
+            statsWindow.Show();
+            this.Close();
+        }
     }
 
 

@@ -17,12 +17,12 @@
             <ColumnDefinition Width="0"></ColumnDefinition>
         </Grid.ColumnDefinitions>        
         <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <MenuItem Header="Rekenmachine">
-                <MenuItem Header="Standard"/>
-                <MenuItem Header="Metrics"/>
-                <MenuItem Header="Degrees"/>
-                <MenuItem Header="Decimal"/>
-                <MenuItem Header="Exchange"/>
+            <MenuItem Header="Menu">
+                <MenuItem Header="Rekenmachine"/>
+                <MenuItem Header="Statistieken" Click="Stats_Window"/>
+                <MenuItem Header="Graden"/>
+                <MenuItem Header="Decimalen"/>
+                <MenuItem Header="Wisselkoers"/>
                 <Separator/>
                 <MenuItem Header="Exit" Click="Exit_Application"/>
             </MenuItem>
