@@ -47,6 +47,11 @@ namespace WPF_Calculator
         { 
             
         }
+
+        private void Result_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="WPF Calculator" Height="450" Width="350">
+        Title="WPF Calculator" Height="475" Width="375">
     <Grid Background="Salmon">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -30,16 +30,21 @@
         <Button Content="7" HorizontalAlignment="Left" Margin="50,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="8" HorizontalAlignment="Left" Margin="125,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="9" HorizontalAlignment="Left" Margin="200,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="÷" HorizontalAlignment="Left" Margin="275,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="4" HorizontalAlignment="Left" Margin="50,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="5" HorizontalAlignment="Left" Margin="125,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="6" HorizontalAlignment="Left" Margin="200,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="x" HorizontalAlignment="Left" Margin="275,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="1" HorizontalAlignment="Left" Margin="50,306,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="2" HorizontalAlignment="Left" Margin="125,306,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="3" HorizontalAlignment="Left" Margin="200,306,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="275,306,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
         <Button Content="Del" HorizontalAlignment="Left" Margin="50,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Del_Click"/>
         <Button Content="R" HorizontalAlignment="Left" Margin="125,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="R_Click"></Button>
-        <Button Content="Off" HorizontalAlignment="Left" Margin="200,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="97" Height="31" FontSize="18" Click="Exit_Application"></Button>
-        <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="50,34,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="250" FontSize="20" Background="White" BorderThickness="2" x:Name="tb" Text="">
+        <Button Content="Off" HorizontalAlignment="Left" Margin="200,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Height="31" FontSize="18" Click="Exit_Application"></Button>
+        <Button Content="0" HorizontalAlignment="Left" Margin="50,378,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="125,378,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Height="31" FontSize="18" Click="Result_Click"></Button>
+        <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="50,34,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="271" FontSize="20" Background="White" BorderThickness="2" x:Name="tb" Text="">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
             </TextBox.Foreground>
