@@ -19,7 +19,7 @@
         <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <MenuItem Header="Menu">
                 <MenuItem Header="Rekenmachine" Click="Calc_Window"/>
-                <MenuItem Header="Statistieken" Click="Stats_Window"/>
+                <MenuItem Header="Statistieken"/>
                 <MenuItem Header="Graden"/>
                 <MenuItem Header="Decimalen"/>
                 <MenuItem Header="Wisselkoers"/>
