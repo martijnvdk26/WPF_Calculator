@@ -37,5 +37,10 @@ namespace WPF_Calculator
             statsWindow.Show();
             this.Close();
         }
+
+        private void Exit_Application(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
