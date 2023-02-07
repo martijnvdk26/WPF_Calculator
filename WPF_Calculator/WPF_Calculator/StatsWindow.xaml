@@ -29,7 +29,7 @@
         </Menu>
         <Label Content="Voer hier een lengte in inches in: " Margin="10,17,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
         <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,51,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="185" FontSize="20" Background="White" BorderThickness="2" x:Name="statstb" Text=""></TextBox>
-        <Button Content="Omrekenen" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" Margin="219,51,0,0" Height="40"></Button>
+        <Button Content="Omrekenen" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" Margin="219,51,0,0" Height="40" Click="Conversion"></Button>
 
     </Grid>
 </Window>
