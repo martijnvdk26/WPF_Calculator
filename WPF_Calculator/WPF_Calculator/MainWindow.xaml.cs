@@ -120,7 +120,6 @@ namespace WPF_Calculator
             ExchangeWindow exchangeWindow = new ExchangeWindow();
             exchangeWindow.Show();
             this.Close();
-
         }
     }
 
