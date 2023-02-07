@@ -48,8 +48,18 @@ namespace WPF_Calculator
             
         }
 
+        private void Clear(object sender, RoutedEventArgs e)
+        {
+            statstb.Text = "";
+        }
+
         private void converse()
         {
+            double inches;
+            inches = Convert.ToDouble(statstb.Text);
+
+            double cm = inches * 2.54;
+            MessageBox.Show(inches + " inches is " + cm + " centimeters");
 
         }
     }
