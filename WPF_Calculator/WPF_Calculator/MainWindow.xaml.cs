@@ -114,6 +114,14 @@ namespace WPF_Calculator
             statsWindow.Show();
             this.Close();
         }
+
+        private void Exchange_Window(object sender, RoutedEventArgs e)
+        {
+            ExchangeWindow exchangeWindow = new ExchangeWindow();
+            exchangeWindow.Show();
+            this.Close();
+
+        }
     }
 
 
