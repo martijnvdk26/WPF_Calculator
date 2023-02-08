@@ -35,7 +35,16 @@
             <ComboBoxItem Content="Dollar"></ComboBoxItem>
             <ComboBoxItem Content="Pond"></ComboBoxItem>
         </ComboBox>
-        
-        
+        <Label Content="Naar:" Grid.Row="1" Margin="1,70,0,0"></Label>
+        <ComboBox Name="Cbox2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Grid.Row="1" Margin="150,70,0,0">
+            <ComboBoxItem Content="Euro"></ComboBoxItem>
+            <ComboBoxItem Content="Dollar"></ComboBoxItem>
+            <ComboBoxItem Content="Pond"></ComboBoxItem>
+        </ComboBox>
+        <Label Content="Wisselkoers:" Grid.Row="1" Margin="1,100,0,0"></Label>
+        <TextBox x:Name="ExchangeTB" Grid.Row="1" Height="25" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="150,100,0,0"></TextBox>
+        <Button Width="60" Height="30" Content="Omzetten" x:Name="ButtonConvert" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,130,0,0" Background="DarkViolet" Foreground="White" Click="Convert_Click"></Button>
+
+
     </Grid>
 </Window>
