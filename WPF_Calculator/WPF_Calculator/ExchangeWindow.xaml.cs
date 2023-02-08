@@ -104,6 +104,7 @@ namespace WPF_Calculator
             {
                 tot = amount * 1;
                 ExchangeTB.Text = tot.ToString();
+                MessageBox.Show("Niet zo handig he, 2 dezelfde eenheden omrekenen. Idioot! Nah do!");
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
@@ -111,6 +112,7 @@ namespace WPF_Calculator
             {
                 tot = amount * 1;
                 ExchangeTB.Text = tot.ToString();
+                MessageBox.Show("Niet zo handig he, 2 dezelfde eenheden omrekenen. Idioot! Nah do!");
             }
         }
 
