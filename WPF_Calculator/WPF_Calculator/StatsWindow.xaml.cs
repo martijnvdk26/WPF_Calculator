@@ -30,7 +30,13 @@ namespace WPF_Calculator
             mainWindow.Show();
             this.Close();
         }
-        
+        private void Exchange_Window(object sender, RoutedEventArgs e)
+        {
+            ExchangeWindow exchangeWindow = new ExchangeWindow();
+            exchangeWindow.Show();
+            this.Close();
+        }
+
         private void Exit_Application(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
