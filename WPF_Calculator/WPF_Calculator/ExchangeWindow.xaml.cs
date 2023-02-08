@@ -62,6 +62,56 @@ namespace WPF_Calculator
                 tot = amount * 0.89;
                 ExchangeTB.Text = tot.ToString();
             }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
+            {
+                tot = amount * 0.83;
+                ExchangeTB.Text = tot.ToString();
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
+            {
+                tot = amount * 0.93;
+                ExchangeTB.Text = tot.ToString();
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
+            {
+                tot = amount * 1.13;
+                ExchangeTB.Text = tot.ToString();
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
+            {
+                tot = amount * 1.21;
+                ExchangeTB.Text = tot.ToString();
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Euro" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
+            {
+                tot = amount * 1;
+                ExchangeTB.Text = tot.ToString();
+                MessageBox.Show("Niet zo handig he, 2 dezelfde eenheden omrekenen. Idioot! Nah do!");
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
+            {
+                tot = amount * 1;
+                ExchangeTB.Text = tot.ToString();
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
+            {
+                tot = amount * 1;
+                ExchangeTB.Text = tot.ToString();
+            }
         }
 
 
