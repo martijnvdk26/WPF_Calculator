@@ -43,6 +43,27 @@ namespace WPF_Calculator
             Application.Current.Shutdown();
         }
 
+        private void Convert_Click(object sender, RoutedEventArgs e) 
+        {
+            double tot;
+            double amount = double.Parse(AmountTB.Text);
+
+            if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Euro" &&
+                ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
+            {
+                tot = amount * 1.07;
+                ExchangeTB.Text = tot.ToString();
+
+            }
+
+            else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Euro" &&
+                    ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
+            {
+                tot = amount * 0.89;
+                ExchangeTB.Text = tot.ToString();
+            }
+        }
+
 
     }
 }
