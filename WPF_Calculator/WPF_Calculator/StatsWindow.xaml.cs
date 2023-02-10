@@ -41,23 +41,8 @@ namespace WPF_Calculator
         {
             Application.Current.Shutdown();
         }
-        private void Conversion(object sender, RoutedEventArgs e) 
-        {
-            try 
-            {
-                converse();            
-            }
-            catch (Exception exc)
-            {
-                
-            }
-            
-        }
+        
+        
 
-        private void converse()
-        {
-
-
-        }
     }
 }
