@@ -24,6 +24,8 @@ namespace WPF_Calculator
             InitializeComponent();
         }
 
+        //navigatie naar andere windows
+
         private void Calc_Window(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
@@ -41,8 +43,19 @@ namespace WPF_Calculator
         {
             Application.Current.Shutdown();
         }
-        
-        
+
+        // code voor het omrekenen van de lengtes
+        private void Convert_Length (object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Convert_Length(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+
 
     }
 }
