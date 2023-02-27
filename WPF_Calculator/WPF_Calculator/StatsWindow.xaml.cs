@@ -50,10 +50,13 @@ namespace WPF_Calculator
             
         }
 
-        private void Convert_Length(object sender, RoutedEventArgs e)
+        // code voor het omrekenen van de gewichten
+        private void Convert_Weight(object sender, RoutedEventArgs e)
         {
-            
+
         }
+
+
 
 
 
