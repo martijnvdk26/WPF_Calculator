@@ -5,18 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="CalcHistory" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>            
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Text="Historie" FontSize="20" FontWeight="Bold" Margin="20,20,0,0"></TextBlock>
-        <Button Content="Historie ophalen" Grid.Column="0" Height="30" Width="100" Margin="20,50,80,324"></Button>
-        <Button Content="Cache legen" Grid.Column="0" Height="30" Width="100" Margin="20,115,80,289"></Button>
-        <DataGrid Grid.Column="1" Grid.Row="0" Margin="20,20,20,20"></DataGrid>
+        Title="CalcHistory" Height="350" Width="625">
+    <Grid Height="350" Width="625" Background="#FFD1F9EE">
+        <TextBlock Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Text="History" FontSize="20" FontStretch="Normal" x:Name="historyTB" Margin="16,15,0,0" Foreground="#FF1E1E1E" FontWeight="Bold"/>
+        <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="625">
+            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="14,55,0,46" Name="dataGridCalc" Width="575" ItemsSource="{Binding Path=LoadDataBinding}" CanUserResizeRows="False">
+                
+            </DataGrid>
+
+        </Grid>
     </Grid>
 </Window>
