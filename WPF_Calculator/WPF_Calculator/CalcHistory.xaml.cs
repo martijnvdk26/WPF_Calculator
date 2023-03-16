@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.BC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +21,25 @@ namespace WPF_Calculator
     /// </summary>
     public partial class CalcHistory : Window
     {
+
+        static class DB 
+        {
+            public static string connectionDB = "SERVER=localhost;DATABASE=calcresults;USERNAME=root;PASSWORD=Test@1234!";
+        }
+        
         public CalcHistory()
         {
-            InitializeComponent();
+            InitializeComponent();           
+
         }
+
+        private void RefreshButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+  
+    }
         
         
     }
