@@ -9,7 +9,14 @@
     <Grid Height="350" Width="625" Background="#FFD1F9EE">
         <TextBlock Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Text="History" FontSize="20" FontStretch="Normal" x:Name="historyTB" Margin="16,15,0,0" Foreground="#FF1E1E1E" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="625">
-            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="14,55,0,46" Name="dataGridCalc" Width="575" ItemsSource="{Binding Path=LoadDataBinding}" CanUserResizeRows="False">
+            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="25,55,0,46" Name="dataGridCalc" Width="575" ItemsSource="{Binding Path=LoadDataBinding}" CanUserResizeRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding ="{Binding Path=CalcID}" Header="CalcID" Width="*" IsReadOnly="True" />
+                    <DataGridTextColumn Binding ="{Binding Path=CalcDate}" Header="CalcDate" Width="*" IsReadOnly="True" />
+                    <DataGridTextColumn Binding ="{Binding Path=CalcInput}" Header="CalcInput" Width="*" IsReadOnly="True" />
+                    <DataGridTextColumn Binding ="{Binding Path=CalcResult}" Header="CalcResult" Width="*" IsReadOnly="True" />
+                </DataGrid.Columns>
+                
                 
             </DataGrid>
 
