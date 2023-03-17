@@ -10,8 +10,9 @@
         <TextBlock Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Text="History" FontSize="20" FontStretch="Normal" x:Name="historyTB" Margin="16,15,0,0" Foreground="#FF1E1E1E" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="625">
             <DataGrid HorizontalAlignment="Left" Margin="25,55,0,46" Name="dataGridCalc" ItemsSource="{Binding}" CanUserResizeRows="False"></DataGrid>
-            
-            <Button Content="Clear" Click="ClearDataButton" HorizontalAlignment="Left" Margin="25,283,0,0" VerticalAlignment="Top"/>
+
+            <Button Content="Refresh" Click="RefreshButton" HorizontalAlignment="Left" Margin="25,283,0,0" VerticalAlignment="Top"/>
+            <Button Content="Clear" Click="ClearDataButton" HorizontalAlignment="Left" Margin="75,283,0,0" VerticalAlignment="Top"/>
 
         </Grid>
     </Grid>
