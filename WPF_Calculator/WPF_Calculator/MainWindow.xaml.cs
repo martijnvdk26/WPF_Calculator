@@ -67,7 +67,8 @@ namespace WPF_Calculator
             catch (Exception exc)
             {
                 tb.Text = "Error!";
-            }
+            }           
+
 
         }
         private void result()
@@ -115,18 +116,19 @@ namespace WPF_Calculator
             {
                 tb.Text += "=" + (op1 / op2);
             }
+        }
+        
+        private void DatabaseAdd(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
 
-            //string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
-            //MySqlConnection connection = new MySqlConnection(connectionString);
-
-            //MySqlCommand cmd = new MySqlCommand("INSERT INTO calc values(@nm)", connection);
-            //cmd.Parameters.AddWithValue("@nm", tb.Text);
-            //connection.Open();
-            //DataTable dt = new DataTable();
-            //dt.Load(cmd.ExecuteReader());
-            //connection.Close();
-
-          
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+            cmd.Parameters.AddWithValue("@nm", tb.Text);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            connection.Close();
         }
 
         private void Stats_Window(object sender, RoutedEventArgs e)
