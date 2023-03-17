@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,7 +115,20 @@ namespace WPF_Calculator
             {
                 tb.Text += "=" + (op1 / op2);
             }
+
+            //string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+            //MySqlConnection connection = new MySqlConnection(connectionString);
+
+            //MySqlCommand cmd = new MySqlCommand("INSERT INTO calc values(@nm)", connection);
+            //cmd.Parameters.AddWithValue("@nm", tb.Text);
+            //connection.Open();
+            //DataTable dt = new DataTable();
+            //dt.Load(cmd.ExecuteReader());
+            //connection.Close();
+
+          
         }
+
         private void Stats_Window(object sender, RoutedEventArgs e)
         {
             StatsWindow statsWindow = new StatsWindow();
