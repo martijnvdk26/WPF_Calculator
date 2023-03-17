@@ -43,7 +43,8 @@
         </ComboBox>
         <Label Content="Wisselkoers:" Grid.Row="1" Margin="1,100,0,0"></Label>
         <TextBox x:Name="ExchangeTB" Grid.Row="1" Height="25" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="150,100,0,0"></TextBox>
-        <Button Width="60" Height="30" Content="Omzetten" x:Name="ButtonConvert" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,130,0,0" Background="DarkViolet" Foreground="White" Click="Convert_Click"></Button>
+        <Button Width="60" Height="30" Content="Omzetten" x:Name="ButtonConvert" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,140,0,0" Background="DarkViolet" Foreground="White" Click="Convert_Click"></Button>
+        <Button Width="100" Height="30" Content="Add to Database" x:Name="AddtoDB" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,140,0,0" Background="DarkViolet" Foreground="White" Click="AddToDbExch"></Button>
 
 
     </Grid>

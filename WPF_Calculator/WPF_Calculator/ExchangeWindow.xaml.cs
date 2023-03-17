@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +54,7 @@ namespace WPF_Calculator
                 ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
             {
                 tot = amount * 1.07;
-                ExchangeTB.Text = tot.ToString();
+                ExchangeTB.Text = "1 euro is " + tot.ToString() + " dollar";
 
             }
 
@@ -60,60 +62,70 @@ namespace WPF_Calculator
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
             {
                 tot = amount * 0.89;
-                ExchangeTB.Text = tot.ToString();
+                ExchangeTB.Text = "1 euro is " + tot.ToString() + " pond";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
             {
                 tot = amount * 0.83;
-                ExchangeTB.Text = tot.ToString();
+                ExchangeTB.Text = "1 Dollar is " + tot.ToString() + " pond";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
             {
                 tot = amount * 0.93;
-                ExchangeTB.Text = tot.ToString();
+                ExchangeTB.Text = "1 Dollar is " + tot.ToString() + " euro";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
             {
                 tot = amount * 1.13;
-                ExchangeTB.Text = tot.ToString();
+                ExchangeTB.Text = "1 pond is " + tot.ToString() + " euro";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
             {
                 tot = amount * 1.21;
-                ExchangeTB.Text = tot.ToString();
+                ExchangeTB.Text = "1 pond is " + tot.ToString() + " dollar";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Euro" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
             {
                 tot = amount * 1;
-                ExchangeTB.Text = tot.ToString();
-                MessageBox.Show("Niet zo handig he, 2 dezelfde eenheden omrekenen. Idioot! Nah do!");
+                ExchangeTB.Text = "1 euro is" + tot.ToString() + " euro";                
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
             {
                 tot = amount * 1;
-                ExchangeTB.Text = tot.ToString();
-                MessageBox.Show("Niet zo handig he, 2 dezelfde eenheden omrekenen. Idioot! Nah do!");
+                ExchangeTB.Text = "1 dollar is " + tot.ToString() + " dollar";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
             {
                 tot = amount * 1;
-                ExchangeTB.Text = tot.ToString();
-                MessageBox.Show("Niet zo handig he, 2 dezelfde eenheden omrekenen. Idioot! Nah do!");
+                ExchangeTB.Text = "1 pond is" + tot.ToString() + " pond";
             }
+        }
+        
+        private void AddToDbExch(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+            cmd.Parameters.AddWithValue("@nm", ExchangeTB.Text);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            connection.Close();
         }
 
 
