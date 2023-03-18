@@ -113,20 +113,24 @@ namespace WPF_Calculator
                 tot = amount * 1;
                 ExchangeTB.Text = "1 pond is" + tot.ToString() + " pond";
             }
-        }
-        
-        private void AddToDbExch(object sender, RoutedEventArgs e)
-        {
-            string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
-            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
 
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
-            cmd.Parameters.AddWithValue("@nm", ExchangeTB.Text);
-            connection.Open();
-            DataTable dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            connection.Close();
-        }
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+                cmd.Parameters.AddWithValue("@nm", ExchangeTB.Text);
+                connection.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
+            }
+        }      
+
 
 
     }

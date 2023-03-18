@@ -51,7 +51,7 @@
                 <SolidColorBrush Color="Black" />
             </TextBox.Foreground>
         </TextBox>
-        <Button Content="Add to database" HorizontalAlignment="Left" Margin="50,357,0,0" Grid.Row="1" VerticalAlignment="Top" Width="271" Height="31" FontSize="18" Click="DatabaseAdd"/>
+        <!--<Button Content="Add to database" HorizontalAlignment="Left" Margin="50,357,0,0" Grid.Row="1" VerticalAlignment="Top" Width="271" Height="31" FontSize="18" Click="DatabaseAdd"/>-->
     </Grid>
 
 
