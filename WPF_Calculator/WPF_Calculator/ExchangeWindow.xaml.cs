@@ -62,14 +62,14 @@ namespace WPF_Calculator
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
             {
                 tot = Math.Round(amount * 0.89, 2);
-                ExchangeTB.Text = "1 euro is " + tot.ToString() + " pond";
+                ExchangeTB.Text = amount.ToString() + " euro is " + tot.ToString() + " pond";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
             {
                 tot = Math.Round(amount * 0.83, 2);
-                ExchangeTB.Text = "1 Dollar is " + tot.ToString() + " pond";
+                ExchangeTB.Text = amount.ToString() + " Dollar is " + tot.ToString() + " pond";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
@@ -83,35 +83,35 @@ namespace WPF_Calculator
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
             {
                 tot = Math.Round(amount * 1.13, 2);
-                ExchangeTB.Text = "1 pond is " + tot.ToString() + " euro";
+                ExchangeTB.Text = amount.ToString() + " pond is " + tot.ToString() + " euro";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
             {
                 tot = Math.Round(amount * 1.21, 2);
-                ExchangeTB.Text = "1 pond is " + tot.ToString() + " dollar";
+                ExchangeTB.Text = amount.ToString() + " pond is " + tot.ToString() + " dollar";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Euro" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Euro")
             {
                 tot = amount * 1;
-                ExchangeTB.Text = "1 euro is" + tot.ToString() + " euro";                
+                ExchangeTB.Text = amount.ToString() + " euro is" + tot.ToString() + " euro";                
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Dollar" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
             {
                 tot = amount * 1;
-                ExchangeTB.Text = "1 dollar is " + tot.ToString() + " dollar";
+                ExchangeTB.Text = amount.ToString() + " dollar is " + tot.ToString() + " dollar";
             }
 
             else if (((ComboBoxItem)Cbox1.SelectedItem).Content.ToString() == "Pond" &&
                     ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Pond")
             {
                 tot = amount * 1;
-                ExchangeTB.Text = "1 pond is" + tot.ToString() + " pond";
+                ExchangeTB.Text = amount.ToString() + " pond is" + tot.ToString() + " pond";
             }
             try
             {
