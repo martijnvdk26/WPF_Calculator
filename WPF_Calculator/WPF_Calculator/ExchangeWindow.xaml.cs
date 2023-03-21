@@ -54,7 +54,7 @@ namespace WPF_Calculator
                 ((ComboBoxItem)Cbox2.SelectedItem).Content.ToString() == "Dollar")
             {
                 tot = Math.Round(amount * 1.07, 2);
-                ExchangeTB.Text = "1 euro is " + tot.ToString() + " dollar";
+                ExchangeTB.Text = amount.ToString() + "euro is " + tot.ToString() + " dollar";
 
             }
 

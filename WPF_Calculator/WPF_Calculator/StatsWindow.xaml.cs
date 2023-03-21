@@ -47,11 +47,27 @@ namespace WPF_Calculator
         // code voor het omrekenen van de lengtes
         private void Convert_Length (object sender, RoutedEventArgs e)
         {
-            
+            double tot1;
+            double length = double.Parse(LengthTB.Text);
+
+            if (((ComboBoxItem)StatsBox1.SelectedItem).Content.ToString() == "Inch" &&
+               ((ComboBoxItem)StatsBox2.SelectedItem).Content.ToString() == "Centimeter")
+            {
+                tot1 = Math.Round(length * 2.54, 2);
+                ResultTB.Text = "1 Inch is " + tot1.ToString() + " centimer";
+
+            }
+
         }
 
         // code voor het omrekenen van de gewichten
         private void Convert_Weight(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        // code voor het omrekenen van volumes
+        private void Convert_Volume(object sender, RoutedEventArgs e)
         {
 
         }
