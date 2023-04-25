@@ -54,7 +54,23 @@ namespace WPF_Calculator
                ((ComboBoxItem)StatsBox2.SelectedItem).Content.ToString() == "Centimeter")
             {
                 tot1 = Math.Round(length * 2.54, 2);
-                ResultTB.Text = "1 Inch is " + tot1.ToString() + " centimer";
+                ResultTB.Text = length.ToString() + " Inch is " + tot1.ToString() + " centimeter";
+
+            }
+
+            if (((ComboBoxItem)StatsBox1.SelectedItem).Content.ToString() == "Voet" &&
+               ((ComboBoxItem)StatsBox2.SelectedItem).Content.ToString() == "Meter")
+            {
+                tot1 = Math.Round(length * 0.3048, 2);
+                ResultTB.Text = length.ToString() + " Voet is " + tot1.ToString() + " meter";
+
+            }
+
+            if (((ComboBoxItem)StatsBox1.SelectedItem).Content.ToString() == "Mile" &&
+               ((ComboBoxItem)StatsBox2.SelectedItem).Content.ToString() == "Kilometer")
+            {
+                tot1 = Math.Round(length * 1.6093, 2);
+                ResultTB.Text = length.ToString() + " Mile is " + tot1.ToString() + " kilometer";
 
             }
 
