@@ -13,6 +13,7 @@
 
             <Button Content="Refresh" Click="RefreshButton" HorizontalAlignment="Left" Margin="25,283,0,0" VerticalAlignment="Top"/>
             <Button Content="Clear" Click="ClearDataButton" HorizontalAlignment="Left" Margin="75,283,0,0" VerticalAlignment="Top"/>
+            <Button Content="Main Menu" Click="MainMenuButton" HorizontalAlignment="Left" Margin="112.5,283,0,0" VerticalAlignment="Top"/>
 
         </Grid>
     </Grid>

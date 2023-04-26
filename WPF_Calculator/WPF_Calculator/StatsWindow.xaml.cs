@@ -79,13 +79,64 @@ namespace WPF_Calculator
         // code voor het omrekenen van de gewichten
         private void Convert_Weight(object sender, RoutedEventArgs e)
         {
+            double tot2;
+            double weight = double.Parse(WeightTB.Text);
+            if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Pound" &&
+               ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Kilogram")
+            {
+                tot2 = Math.Round(weight * 0.453592, 2);
+                ResultTB.Text = weight.ToString() + " Pound is " + tot2.ToString() + " kilogram";
 
+            }
+            if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Stone" &&
+               ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Kilogram")
+            {
+                tot2 = Math.Round(weight * 6.35029, 2);
+                ResultTB.Text = weight.ToString() + " Stone is " + tot2.ToString() + " kilogram";
+            }
+
+            if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Pound" &&
+               ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Gram")
+            {
+                tot2 = Math.Round(weight * 453.592, 2);
+                ResultTB.Text = weight.ToString() + " Pound is " + tot2.ToString() + " gram";
+            }
+
+            if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Stone" &&
+               ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Gram")
+            {
+                tot2 = Math.Round(weight * 6350.29, 2);
+                ResultTB.Text = weight.ToString() + " Stone is " + tot2.ToString() + " gram";
+            }
+            
         }
 
         // code voor het omrekenen van volumes
         private void Convert_Volume(object sender, RoutedEventArgs e)
         {
+            double tot3;
+            double volume = double.Parse(VolumeTB.Text);
+            if (((ComboBoxItem)StatsBox5.SelectedItem).Content.ToString() == "Gallon" &&
+               ((ComboBoxItem)StatsBox6.SelectedItem).Content.ToString() == "Liter")
+            {
+                tot3 = Math.Round(volume * 3.78541, 2);
+                VolumeTB2.Text = volume.ToString() + " Gallon is " + tot3.ToString() + " liter";
+            }
 
+            if (((ComboBoxItem)StatsBox5.SelectedItem).Content.ToString() == "Liter" &&
+                ((ComboBoxItem)StatsBox6.SelectedItem).Content.ToString() == "Gallon")
+            {
+                tot3 = Math.Round(volume * 0.264172, 2);
+                VolumeTB2.Text = volume.ToString() + " Liter is " + tot3.ToString() + " gallon";
+            }
+
+        }
+
+        private void Calc_History(object sender, RoutedEventArgs e)
+        {
+            CalcHistory calcHistory = new CalcHistory();
+            calcHistory.Show();
+            this.Close();
         }
 
 

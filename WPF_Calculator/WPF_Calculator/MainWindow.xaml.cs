@@ -31,6 +31,7 @@ namespace WPF_Calculator
         {
             CalcHistory calcHistory = new CalcHistory();
             calcHistory.Show();
+            this.Close();
         }
 
         // sluit de app af, wordt gebruikt door de off button en de exit button boven in het menu genaamd rekenmachine

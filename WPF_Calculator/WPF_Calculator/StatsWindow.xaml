@@ -25,6 +25,7 @@
                 <MenuItem Header="Decimalen"/>
                 <MenuItem Header="Wisselkoers" Click="Exchange_Window"/>
                 <Separator/>
+                <MenuItem Header="Historie" Click="Calc_History"/>
                 <MenuItem Header="Exit" Click="Exit_Application"/>
             </MenuItem>
         </Menu>

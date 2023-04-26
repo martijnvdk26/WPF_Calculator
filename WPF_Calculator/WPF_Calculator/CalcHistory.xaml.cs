@@ -70,10 +70,17 @@ namespace WPF_Calculator
             dataGridCalc.DataContext = dt;
         }
 
+        private void MainMenuButton(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
 
 
     }
-        
-        
-    
+
+
+
 }
