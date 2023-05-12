@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +76,23 @@ namespace WPF_Calculator
 
             }
 
+            try
+            {
+                string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+                cmd.Parameters.AddWithValue("@nm", ResultTB.Text);
+                connection.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
+            }
+
         }
 
         // code voor het omrekenen van de gewichten
@@ -85,30 +104,46 @@ namespace WPF_Calculator
                ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Kilogram")
             {
                 tot2 = Math.Round(weight * 0.453592, 2);
-                ResultTB.Text = weight.ToString() + " Pound is " + tot2.ToString() + " kilogram";
+                WeightResultTB.Text = weight.ToString() + " Pound is " + tot2.ToString() + " kilogram";
 
             }
             if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Stone" &&
                ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Kilogram")
             {
                 tot2 = Math.Round(weight * 6.35029, 2);
-                ResultTB.Text = weight.ToString() + " Stone is " + tot2.ToString() + " kilogram";
+                WeightResultTB.Text = weight.ToString() + " Stone is " + tot2.ToString() + " kilogram";
             }
 
             if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Pound" &&
                ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Gram")
             {
                 tot2 = Math.Round(weight * 453.592, 2);
-                ResultTB.Text = weight.ToString() + " Pound is " + tot2.ToString() + " gram";
+                WeightResultTB.Text = weight.ToString() + " Pound is " + tot2.ToString() + " gram";
             }
 
             if (((ComboBoxItem)StatsBox3.SelectedItem).Content.ToString() == "Stone" &&
                ((ComboBoxItem)StatsBox4.SelectedItem).Content.ToString() == "Gram")
             {
                 tot2 = Math.Round(weight * 6350.29, 2);
-                ResultTB.Text = weight.ToString() + " Stone is " + tot2.ToString() + " gram";
+                WeightResultTB.Text = weight.ToString() + " Stone is " + tot2.ToString() + " gram";
             }
-            
+
+            try
+            {
+                string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+                cmd.Parameters.AddWithValue("@nm", WeightResultTB.Text);
+                connection.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
+            }
         }
 
         // code voor het omrekenen van volumes
@@ -128,6 +163,23 @@ namespace WPF_Calculator
             {
                 tot3 = Math.Round(volume * 0.264172, 2);
                 VolumeTB2.Text = volume.ToString() + " Liter is " + tot3.ToString() + " gallon";
+            }
+
+            try
+            {
+                string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+                cmd.Parameters.AddWithValue("@nm", VolumeTB2.Text);
+                connection.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
             }
 
         }
