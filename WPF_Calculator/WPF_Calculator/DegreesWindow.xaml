@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPF_Calculator.DegreesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Calculator"
+        mc:Ignorable="d"
+        Title="DegreesWindow" Height="300" Width="400">
+    <Grid Background="Salmon">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <MenuItem Header="Menu">
+                <MenuItem Header="Rekenmachine" Click="Calc_Window"/>
+                <MenuItem Header="Statistieken" Click="Stats_Window"/>
+                <MenuItem Header="Graden"/>
+                <MenuItem Header="Decimalen"/>
+                <MenuItem Header="Wisselkoers" Click="Exchange_Window"/>
+                <Separator/>
+                <MenuItem Header="Historie" Click="Calc_History"/>
+                <MenuItem Header="Exit" Click="Exit_Application"/>
+            </MenuItem>
+        </Menu>
+        <TextBlock Text="Voer de hoek in graden in:" Grid.Row="1" Grid.Column="0" Margin="5,10,0,0"/>
+        <TextBox x:Name="DegreesTextBox" Grid.Row="1" Margin="175,5,25,83" Height="25" Width="200" FontSize="16"/>
+        <Button x:Name="ConvertButton" Content="Converteer" Grid.Row="1" Margin="175,42,155,52" Click="Convert_Click_1" Height="20" Width="70"/>
+        <TextBlock Text="Resultaat in radialen:" Grid.Row="1" Grid.Column="0" Margin="2,78,2,20"/>
+        <TextBox x:Name="ResultTextBox1" Grid.Row="1" Margin="175,62,25,5" Height="25" Width="200" FontSize="16"/>
+
+
+    </Grid>
+</Window>

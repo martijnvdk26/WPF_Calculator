@@ -68,6 +68,23 @@ namespace WPF_Calculator
             dt.Load(cmd.ExecuteReader());
             connection.Close();
             dataGridCalc.DataContext = dt;
+
+            MessageBox.Show("Alle berekende data is verwijderd!");
+        }
+
+        private void ResetIDButton(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand cmd = new MySqlCommand("TRUNCATE TABLE calc", connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            connection.Close();
+            dataGridCalc.DataContext = dt;
+
+            MessageBox.Show("CalcID is gereset!");
+
         }
 
         private void MainMenuButton(object sender, RoutedEventArgs e)
@@ -75,6 +92,11 @@ namespace WPF_Calculator
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+        private void ExitButton(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
 
 

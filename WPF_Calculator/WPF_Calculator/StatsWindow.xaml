@@ -21,7 +21,7 @@
             <MenuItem Header="Menu">
                 <MenuItem Header="Rekenmachine" Click="Calc_Window"/>
                 <MenuItem Header="Statistieken"/>
-                <MenuItem Header="Graden"/>
+                <MenuItem Header="Graden" Click="Degrees_Window"/>
                 <MenuItem Header="Decimalen"/>
                 <MenuItem Header="Wisselkoers" Click="Exchange_Window"/>
                 <Separator/>

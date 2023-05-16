@@ -41,6 +41,13 @@ namespace WPF_Calculator
             this.Close();
         }
 
+        private void Degrees_Window(object sender, RoutedEventArgs e)
+        {
+            DegreesWindow degreesWindow = new DegreesWindow();
+            degreesWindow.Show();
+            this.Close();
+        }
+
         private void Exit_Application(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

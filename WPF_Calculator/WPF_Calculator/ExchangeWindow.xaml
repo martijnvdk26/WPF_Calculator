@@ -20,10 +20,11 @@
             <MenuItem Header="Menu">
                 <MenuItem Header="Rekenmachine" Click="Calc_Window"/>
                 <MenuItem Header="Statistieken" Click="Stats_Window"/>
-                <MenuItem Header="Graden"/>
+                <MenuItem Header="Graden" Click="Degrees_Window"/>
                 <MenuItem Header="Decimalen"/>
                 <MenuItem Header="Wisselkoers"/>
                 <Separator/>
+                <MenuItem Header="Historie" Click="Calc_History"/>
                 <MenuItem Header="Exit" Click="Exit_Application"/>
             </MenuItem>
         </Menu>
