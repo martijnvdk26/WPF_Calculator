@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="StatsWindow" Height="535" Width="400">
+        Title="Statistieken" Height="535" Width="400">
     <Grid Background="#1e2a54">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>

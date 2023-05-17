@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="CalcHistory" Height="350" Width="625">
+        Title="Historie" Height="350" Width="625">
     <Grid Height="350" Width="625" Background="#ACF6c8">
         <TextBlock Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Text="History" FontSize="20" FontStretch="Normal" x:Name="historyTB" Margin="16,15,0,0" Foreground="#FF1E1E1E" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="625">
