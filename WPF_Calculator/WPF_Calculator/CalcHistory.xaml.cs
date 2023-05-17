@@ -24,9 +24,7 @@ namespace WPF_Calculator
     public partial class CalcHistory : Window
     {
         //MySql connectie
-
-
-
+        
         public CalcHistory()
         {
             InitializeComponent();
@@ -58,20 +56,6 @@ namespace WPF_Calculator
             dataGridCalc.DataContext = dt;
         }
         
-        private void ClearDataButton(object sender, RoutedEventArgs e)
-        {
-            string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand cmd = new MySqlCommand("DELETE FROM calc", connection);
-            connection.Open();
-            DataTable dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            connection.Close();
-            dataGridCalc.DataContext = dt;
-
-            MessageBox.Show("Alle berekende data is verwijderd!");
-        }
-
         private void ResetIDButton(object sender, RoutedEventArgs e)
         {
             string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
@@ -83,7 +67,7 @@ namespace WPF_Calculator
             connection.Close();
             dataGridCalc.DataContext = dt;
 
-            MessageBox.Show("CalcID is gereset!");
+            MessageBox.Show("Alle berekende data is verwijderd!");
 
         }
 

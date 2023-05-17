@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="DegreesWindow" Height="500" Width="400">
-    <Grid Background="Salmon">
+        Title="DegreesWindow" Height="300" Width="400">
+    <Grid Background="#1e2a54">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="Auto"/>
@@ -30,16 +30,16 @@
                 <MenuItem Header="Exit" Click="Exit_Application"/>
             </MenuItem>
         </Menu>
-        <TextBlock Text="Voer de hoek in graden in:" Grid.Row="1" Grid.Column="0" Margin="5,10,0,0"/>
+        <TextBlock Text="Voer de hoek in graden in:" Grid.Row="1" Grid.Column="0" Margin="5,10,0,0" Foreground="White"/>
         <TextBox x:Name="DegreesTextBox1" Grid.Row="1" Margin="175,5,25,83" Height="25" Width="200" FontSize="16"/>
-        <Button x:Name="ConvertButton" Content="Converteer" Grid.Row="1" Margin="175,42,155,52" Click="Convert_Click_1" Height="20" Width="70" Background="DarkViolet" Foreground="White"/>
-        <TextBlock Text="Resultaat in radialen:" Grid.Row="1" Grid.Column="0" Margin="2,78,2,20"/>
+        <Button x:Name="ConvertButton" Content="Converteer" Grid.Row="1" Margin="175,42,155,52" Click="Convert_Click_1" Height="20" Width="70" Background="#d29d29" Foreground="Black"/>
+        <TextBlock Text="Resultaat in radialen:" Grid.Row="1" Grid.Column="0" Margin="5,78,-1,20" Foreground="White" Grid.ColumnSpan="3"/>
         <TextBox x:Name="ResultTextBox1" Grid.Row="1" Margin="175,62,25,5" Height="25" Width="200" FontSize="16"/>
-        
-        <TextBlock Text="Voer de hoek in radialen in:" Grid.Row="2" Grid.Column="0" Margin="5,20,0,78"/>
+
+        <TextBlock Text="Voer de hoek in radialen in:" Grid.Row="2" Grid.Column="0" Margin="5,20,0,78" Foreground="White"/>
         <TextBox x:Name="DegreesTextBox2" Grid.Row="2" Margin="175,11,25,90" Height="25" Width="200" FontSize="16"/>
-        <Button x:Name="ConvertButton2" Content="Converteer" Grid.Row="2" Margin="175,51,155,62" Click="Convert_Click_2" Height="20" Width="70" Background="DarkViolet" Foreground="White"/>
-        <TextBlock Text="Resultaat in graden:" Grid.Row="2" Margin="5,87,278,28"/>
+        <Button x:Name="ConvertButton2" Content="Converteer" Grid.Row="2" Margin="175,51,155,62" Click="Convert_Click_2" Height="20" Width="70" Background="#d29d29" Foreground="Black"/>
+        <TextBlock Text="Resultaat in graden:" Grid.Row="2" Margin="5,87,278,28" Foreground="White"/>
         <TextBox x:Name="ResultTextBox2" Grid.Row="2" Height="25" Width="200" Margin="175,83,25,28" />
 
 
