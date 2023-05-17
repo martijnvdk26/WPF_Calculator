@@ -22,7 +22,7 @@
                 <MenuItem Header="Rekenmachine" Click="Calc_Window"/>
                 <MenuItem Header="Statistieken"/>
                 <MenuItem Header="Graden" Click="Degrees_Window"/>
-                <MenuItem Header="Decimalen"/>
+                <MenuItem Header="GetalConversie"/>
                 <MenuItem Header="Wisselkoers" Click="Exchange_Window"/>
                 <Separator/>
                 <MenuItem Header="Historie" Click="Calc_History"/>
