@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
         Title="ExchangeWindow" Height="230" Width="400">
-    <Grid Background="Salmon">
+    <Grid Background="#1e2a54">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*" >
@@ -28,23 +28,23 @@
                 <MenuItem Header="Exit" Click="Exit_Application"/>
             </MenuItem>
         </Menu>
-        <Label Content="Hoeveelheid:" Grid.Row="1" Margin="1,10,0,0"></Label>
+        <Label Content="Hoeveelheid:" Grid.Row="1" Margin="1,10,0,0" Foreground="White"></Label>
         <TextBox x:Name="AmountTB" Grid.Row="1" Height="25" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="150,10,0,0"></TextBox>
-        <Label Content="Van:" Grid.Row="1" Margin="1,40,0,0"></Label>
+        <Label Content="Van:" Grid.Row="1" Margin="1,40,0,0" Foreground="White"></Label>
         <ComboBox Name="Cbox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Grid.Row="1" Margin="150,40,0,0">
             <ComboBoxItem Content="Euro"></ComboBoxItem>
             <ComboBoxItem Content="Dollar"></ComboBoxItem>
             <ComboBoxItem Content="Pond"></ComboBoxItem>
         </ComboBox>
-        <Label Content="Naar:" Grid.Row="1" Margin="1,70,0,0"></Label>
+        <Label Content="Naar:" Grid.Row="1" Margin="1,70,0,0" Foreground="White"></Label>
         <ComboBox Name="Cbox2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Grid.Row="1" Margin="150,70,0,0">
             <ComboBoxItem Content="Euro"></ComboBoxItem>
             <ComboBoxItem Content="Dollar"></ComboBoxItem>
             <ComboBoxItem Content="Pond"></ComboBoxItem>
         </ComboBox>
-        <Label Content="Wisselkoers:" Grid.Row="1" Margin="1,100,0,0"></Label>
+        <Label Content="Wisselkoers:" Grid.Row="1" Margin="1,100,0,0" Foreground="White"></Label>
         <TextBox x:Name="ExchangeTB" Grid.Row="1" Height="25" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="150,100,0,0"></TextBox>
-        <Button Width="60" Height="30" Content="Omzetten" x:Name="ButtonConvert" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,140,0,0" Background="DarkViolet" Foreground="White" Click="Convert_Click"></Button>
+        <Button Width="60" Height="30" Content="Omzetten" x:Name="ButtonConvert" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,140,0,0" Background="#d29d29" Foreground="White" Click="Convert_Click"></Button>
         
 
 

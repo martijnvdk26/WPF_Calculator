@@ -60,7 +60,7 @@ namespace WPF_Calculator
 
         private void Convert_Click_1(object sender, RoutedEventArgs e)
         {
-            double degrees = double.Parse(DegreesTextBox.Text);
+            double degrees = double.Parse(DegreesTextBox1.Text);
             double radians = Math.PI / 180 * degrees;
             ResultTextBox1.Text = Math.Round(radians, 2).ToString() + " radians";
 
@@ -71,6 +71,30 @@ namespace WPF_Calculator
 
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
                 cmd.Parameters.AddWithValue("@nm", ResultTextBox1.Text);
+                connection.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
+            }
+        }
+
+        private void Convert_Click_2(object sender, RoutedEventArgs e)
+        {
+            double radians = double.Parse(DegreesTextBox2.Text);
+            double degrees = radians * 180 / Math.PI;
+            ResultTextBox2.Text = Math.Round(degrees, 2).ToString() + " degrees";
+
+            try
+            {
+                string connectionString = "Server=localhost;Port=3306;Database=calcresults;Uid=root;Pwd=Test@1234!;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO calc (CalcResult) values(@nm)", connection);
+                cmd.Parameters.AddWithValue("@nm", ResultTextBox2.Text);
                 connection.Open();
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());

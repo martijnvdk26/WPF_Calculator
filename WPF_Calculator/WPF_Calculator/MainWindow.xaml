@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
         Title="WPF Calculator" Height="475" Width="375">
-    <Grid Background="Salmon">
+    <Grid Background="#1e2a54">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*" >
