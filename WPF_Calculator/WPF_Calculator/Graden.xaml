@@ -5,8 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_Calculator"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <Label>Graden</Label>
+             d:DesignHeight="275" d:DesignWidth="700" Background="LightBlue">
+    <StackPanel VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="0 5 0 5" HorizontalAlignment="Center">
+            <TextBlock Margin="0 0 10 0" FontWeight="Bold">Decimalen:</TextBlock>
+            <TextBox Width="100" Name="DecimalenInput" TextChanged="DecimalenInput_TextChanged">2</TextBox>
+        </StackPanel>
+        <Grid Margin="20 0 20 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" TextAlignment="Center">Graden</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="0" TextAlignment="Center" FontWeight="Bold">&lt;---&gt;</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="0" TextAlignment="Center">Radialen</TextBlock>
+            <TextBlock Grid.Column="3" Grid.Row="0" TextAlignment="Center" FontWeight="Bold">&lt;---&gt;</TextBlock>
+            <TextBlock Grid.Column="4" Grid.Row="0" TextAlignment="Center">Gon</TextBlock>
+            <TextBox Grid.Column="0" Grid.Row="1" Name="GradenTextBox"></TextBox>
+            <TextBox Grid.Column="2" Grid.Row="1" Name="RadialenTextBox"></TextBox>
+            <TextBox Grid.Column="4" Grid.Row="1" Name="GonTextBox"></TextBox>
+        </Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Width="100" Height="20" Margin="10 15 10 0" Click="ClearKnop_Click" Name="ClearKnop">Clear</Button>
+            <Button Width="100" Height="20" Margin="10 15 10 0" Click="Omzetknop_Click"  Name="Omzetknop">Omzetten</Button>
+        </StackPanel>
+        <TextBlock Height="20" Margin="0 10 0 0" Foreground="Red" HorizontalAlignment="Center" Name="ErrorOutput"></TextBlock>
     </StackPanel>
 </UserControl>
