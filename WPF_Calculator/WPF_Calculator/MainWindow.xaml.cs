@@ -1,80 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WPF_Calculator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-        }
+			this.contentControl.Content = new MetricImperial();
+		}
 
         private void Exit_Application(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void Button_7(object sender, RoutedEventArgs e)
+        private void Navigate(object sender, MouseButtonEventArgs e)
         {
-
+            var page = ((ComboBoxItem)sender).Tag;
+            switch (page)
+            {
+                case "1":
+                    this.contentControl.Content = new MetricImperial();
+                    break;
+                case "2":
+                    this.contentControl.Content = new Graden();
+                    break;
+            }
         }
-
-        private void Button_8(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_9(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_5(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
-
-  
+	}  
 }

@@ -5,39 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="WPF Calculator" Height="400" Width="350"        >
-    <Grid>
+        Title="Conversion Calculator" Height="300" Width="700"        >
+    <Grid Background="LightBlue">
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="0"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <MenuItem Header="Rekenmachine">
-                <MenuItem Header="Standard"/>
-                <MenuItem Header="Metrics"/>
-                <MenuItem Header="Degrees"/>
-                <MenuItem Header="Decimal"/>
-                <MenuItem Header="Exchange"/>
-                <Separator/>
-                <MenuItem Header="Exit" Click="Exit_Application"/>
-            </MenuItem>
-        </Menu>
-        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" AcceptsReturn="True" />
-        <Button Content="7" HorizontalAlignment="Left" Margin="50,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_7"/>
-        <TextBox Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Margin="75,20,0,0" HorizontalAlignment="Left" Width="200" FontSize="20" Background="Black" Name="tb" Text=""></TextBox>
-        <Button Content="8" HorizontalAlignment="Left" Margin="125,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_8"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="200,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_9"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="50,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_4"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="125,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_5"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="200,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_6"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="50,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_1"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="125,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_2"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="200,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" Click="Button_3"/>
+        <ComboBox Grid.Row="0" Grid.Column="0">
+            <ComboBoxItem IsSelected="True" PreviewMouseLeftButtonDown="Navigate" Tag="1">Metric/Imperial</ComboBoxItem>
+            <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="2">Graden</ComboBoxItem>
+            <ComboBoxItem>Voor Programmeurs</ComboBoxItem>
+            <ComboBoxItem>Koersen</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="ExitButton" Grid.Row="0" Grid.Column="1" Content="Exit" Click="Exit_Application"></Button>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ContentControl x:Name="contentControl"/>
+        </Grid>
     </Grid>
-    
-
 </Window>

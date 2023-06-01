@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WPF_Calculator.MetricImperial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Calculator"
+             mc:Ignorable="d" 
+             d:DesignHeight="275" d:DesignWidth="700" Background="LightBlue">
+    <StackPanel VerticalAlignment="Top" Height="275">
+        <ComboBox Height="25" VerticalAlignment="Top">
+            <ComboBoxItem IsSelected="True" PreviewMouseLeftButtonDown="Navigate" Tag="1">Lengte</ComboBoxItem>
+            <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="2">Gewicht</ComboBoxItem>
+            <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="3">Volume</ComboBoxItem>
+        </ComboBox>
+        <ContentControl x:Name="metricControl"/>
+    </StackPanel>
+</UserControl>
