@@ -37,7 +37,7 @@ namespace WPF_Calculator.MetricImperialContent
         private Dictionary<string, double> _imperialValues = new Dictionary<string, double>()
         {
             {"Pound", 453.59237 },
-            {"Stone", 32.399455 }
+            {"Stone", 6350.29 }
         };
 
         public void InvertDirection(object sender, RoutedEventArgs e)
@@ -121,44 +121,34 @@ namespace WPF_Calculator.MetricImperialContent
                     result = Convert.ToDouble(InputBox.Text);
                     var calculationValue = 0.00;
 
-                    if (!InvertedDirection)
-                    {
-                        calculationValue = _imperialValues[LeftComboBox.Text];
+                    if (!InvertedDirection) { calculationValue = _imperialValues[LeftComboBox.Text]; }
+                    else { calculationValue = _metricValues[LeftComboBox.Text]; }
 
-                        switch (RightComboBox.Text)
-                        {
-                            case "Gram":
-                                {
-                                    result = result * calculationValue;
-                                    break;
-                                }
-                            case "Kilogram":
-                                {
-                                    result = result * calculationValue;
-                                    break;
-                                }
-                        }
-                    }
-                    else
-                    {
-                        calculationValue = _metricValues[LeftComboBox.Text];
+					switch (RightComboBox.Text)
+					{
+						case "Pound":
+							{
+								result = result / calculationValue;
+								break;
+							}
+						case "Stone":
+							{
+								result = result / calculationValue / 14;
+								break;
+							}
+						case "Gram":
+							{
+								result = result * calculationValue;
+								break;
+							}
+						case "Kilogram":
+							{
+								result = result * calculationValue / 1000;
+								break;
+							}
+					}
 
-                        switch (RightComboBox.Text)
-                        {
-                            case "Pound":
-                                {
-                                    result = result / calculationValue;
-                                    break;
-                                }
-                            case "Stone":
-                                {
-                                    result = result * calculationValue;
-                                    break;
-                                }
-                        }
-                    }
-
-                    if (Math.Round(result, Decimalen) == 0)
+					if (Math.Round(result, Decimalen) == 0)
                     {
                         OutputBox.Text = "Te Klein.";
                     }

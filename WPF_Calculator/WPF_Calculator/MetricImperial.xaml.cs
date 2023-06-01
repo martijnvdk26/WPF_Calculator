@@ -27,6 +27,7 @@ namespace WPF_Calculator
                     this.metricControl.Content = new Gewicht();
                     break;
                 case "3":
+                    this.metricControl.Content = new Volume();
                     break;
             }
         }
