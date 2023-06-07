@@ -31,6 +31,9 @@ namespace WPF_Calculator
                 case "3":
                     this.contentControl.Content = new Programmeurs();
                     break;
+                case "4":
+                    this.contentControl.Content = new Koersen();
+                    break;
                 case "5":
                     this.contentControl.Content = new Geschiedenis();
                     break;

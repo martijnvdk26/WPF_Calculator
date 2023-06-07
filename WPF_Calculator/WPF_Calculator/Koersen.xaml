@@ -7,8 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="275" d:DesignWidth="700" Background="LightBlue">
     <StackPanel Height="140" Margin="0 55 0 0">
+        <TextBlock TextAlignment="Center">Koers</TextBlock>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Width="50" FontSize="10" Click="InvertDirection" Content="Omkeren"></Button>
+            <TextBlock>1 =</TextBlock>
+            <TextBox Width="50" Margin="10 0 0 0" Name="koersInput"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
             <TextBox Height="20" Width="200" Name="InputBox"></TextBox>

@@ -24,5 +24,45 @@ namespace WPF_Calculator
 		{
 			InitializeComponent();
 		}
+
+		private void Omzetten_click(object sender, RoutedEventArgs e)
+		{
+			var result = InputBox.Text;
+			try
+			{
+				OutputBox.Text = CalcResult(Convert.ToDouble(result), Convert.ToDouble(koersInput.Text));
+			}
+			catch
+			{
+				ErrorOutput.Text = "Foutieve invoer.";
+			}
+		}
+
+		private string CalcResult(double result, double koers)
+		{
+			switch (LeftComboBox.Text)
+			{
+				case "Britse Pond":
+					{
+						new Repository().insertInDb(4, LeftComboBox.Text, RightComboBox.Text, result, Math.Round(result * koers, 2));
+						return Convert.ToString(Math.Round(result * koers, 2));
+					}
+				case "Dollar":
+					{
+						new Repository().insertInDb(4, LeftComboBox.Text, RightComboBox.Text, result, Math.Round(result * koers, 2));
+						return Convert.ToString(Math.Round(result * koers, 2));
+					}
+			}
+
+			return "";
+		}
+
+		private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (InputBox.Text != "")
+			{
+				OutputBox.Text = "";
+			}
+		}
 	}
 }

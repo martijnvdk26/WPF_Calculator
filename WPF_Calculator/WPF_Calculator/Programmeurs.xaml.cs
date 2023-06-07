@@ -45,12 +45,12 @@ namespace WPF_Calculator
 			{
 				case "Hexadecimaal":
 					{
-						new Repository().insertInDb(2, LeftComboBox.Text, RightComboBox.Text, result, result.ToString("X"));
+						new Repository().insertInDb(3, LeftComboBox.Text, RightComboBox.Text, result, result.ToString("X"));
 						return result.ToString("X");
 					}
 				case "Binair":
 					{
-						new Repository().insertInDb(2, LeftComboBox.Text, RightComboBox.Text, result, Convert.ToString(result, 2));
+						new Repository().insertInDb(3, LeftComboBox.Text, RightComboBox.Text, result, Convert.ToString(result, 2));
 						return Convert.ToString(result, 2);
 					}
 				case "Octaal":
