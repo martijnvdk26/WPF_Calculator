@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="WPF_Calculator.Koersen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Calculator"
+             mc:Ignorable="d" 
+             d:DesignHeight="275" d:DesignWidth="700" Background="LightBlue">
+    <StackPanel Height="140" Margin="0 55 0 0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="50" FontSize="10" Click="InvertDirection" Content="Omkeren"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
+            <TextBox Height="20" Width="200" Name="InputBox"></TextBox>
+            <ComboBox Height="20" Width="90" Name="LeftComboBox" SelectionChanged="SelectionChanged">
+                <ComboBoxItem IsSelected="True">Britse Pond</ComboBoxItem>
+                <ComboBoxItem>Dollar</ComboBoxItem>
+            </ComboBox>
+            <TextBlock FontWeight="Bold" Margin="10 0 10 0">-></TextBlock>
+            <TextBlock Height="20" Width="200" Background="white" Name="OutputBox" VerticalAlignment="Center"></TextBlock>
+            <ComboBox Height="20" Width="90" Name="RightComboBox" SelectionChanged="SelectionChanged">
+                <ComboBoxItem IsSelected="True">Euro</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <Button Width="100" Height="20" Margin="0 15 0 0" Click="Omzetten_click" Name="Omzetknop">Omzetten</Button>
+        <TextBlock Height="20" Margin="0 10 0 0" Foreground="Red" HorizontalAlignment="Center" Name="ErrorOutput"></TextBlock>
+    </StackPanel>
+</UserControl>

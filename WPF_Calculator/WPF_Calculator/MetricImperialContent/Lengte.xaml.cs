@@ -20,15 +20,15 @@ namespace WPF_Calculator.MetricImperialContent
 
         private Dictionary<string, double> _metricValues = new Dictionary<string, double>()
         {
-            {"Centimeter", 2.54 },
-            {"Meter", 3.281 },
-            {"Kilometer", 1.609 }
+            {"Centimeter", 1 },
+            {"Meter", 100 },
+            {"Kilometer", 1000 }
         };
         private Dictionary<string, double> _imperialValues = new Dictionary<string, double>()
         {
-            {"Inch", 2.54 },
-            {"Voet", 3.281 },
-            {"Mile", 1.609 }
+            {"Inch", 1 },
+            {"Voet", 12 },
+            {"Mile", 63359 }
         };
         public void InvertDirection(object sender, RoutedEventArgs e)
         {
@@ -109,54 +109,65 @@ namespace WPF_Calculator.MetricImperialContent
                 {
                     ErrorOutput.Text = "";
                     result = Convert.ToDouble(InputBox.Text);
-                    var calculationValue = 0.00;
 
-                    if (!InvertedDirection)
+                    var multiplier = 1;
+                    switch (LeftComboBox.Text)
                     {
-                        calculationValue = _imperialValues[LeftComboBox.Text];
-
-                        switch (RightComboBox.Text)
-                        {
-                            case "Centimeter":
-                                {
-                                    result = result * calculationValue;
-                                    break;
-                                }
-                            case "Meter":
-                                {
-                                    result = result / 100 * calculationValue;
-                                    break;
-                                }
-                            case "Kilometer":
-                                {
-                                    result = result / 1000 / 100 * calculationValue;
-                                    break;
-                                }
-                        }
+                        case "Meter":
+                            {
+                                multiplier = 100;
+                                break;
+                            }
+                        case "Kilometer":
+                            {
+                                multiplier = 1000 * 100;
+                                break;
+                            }
+                        case "Voet":
+                            {
+                                multiplier = 12 * 12;
+                                break;
+                            }
+                        case "Mile":
+                            {
+                                multiplier = 5280 * 12;
+                                break;
+                            }
                     }
-                    else
+
+                    switch (RightComboBox.Text)
                     {
-                        calculationValue = _metricValues[LeftComboBox.Text];
-
-                        switch (RightComboBox.Text)
-                        {
-                            case "Inch":
-                                {
-                                    result = result / calculationValue;
-                                    break;
-                                }
-                            case "Voet":
-                                {
-                                    result = result / 12 / calculationValue;
-                                    break;
-                                }
-                            case "Mile":
-                                {
-                                    result = result / 5280 / 12 / calculationValue;
-                                    break;
-                                }
-                        }
-                    }
+                        case "Centimeter":
+                            {
+                                result = result * 2.54 * multiplier;
+                                break;
+                            }
+                        case "Meter":
+                            {
+                                result = result * 2.54 / 100 * multiplier;
+                                break;
+							}
+                        case "Kilometer":
+                            {
+                                result = result * 2.54 / 100000 * multiplier;
+                                break;
+							}
+						case "Inch":
+							{
+								result = result / 2.54 * multiplier;
+								break;
+							}
+						case "Voet":
+							{
+								result = result / 2.54 / 12 * multiplier;
+								break;
+							}
+						case "Mile":
+							{
+								result = result / 2.54 / 12 / 5280 * multiplier;
+								break;
+							}
+					}
 
                     if (Math.Round(result, Decimalen) == 0)
                     {
@@ -165,7 +176,8 @@ namespace WPF_Calculator.MetricImperialContent
                     else
                     {
                         OutputBox.Text = Math.Round(result, Decimalen).ToString();
-                    }
+                        new Repository().insertInDb(1, LeftComboBox.Text, RightComboBox.Text, Convert.ToDouble(InputBox.Text), Math.Round(result, Decimalen));
+					}
                 }
                 else
                 {

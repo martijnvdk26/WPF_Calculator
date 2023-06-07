@@ -18,8 +18,9 @@
         <ComboBox Grid.Row="0" Grid.Column="0">
             <ComboBoxItem IsSelected="True" PreviewMouseLeftButtonDown="Navigate" Tag="1">Metric/Imperial</ComboBoxItem>
             <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="2">Graden</ComboBoxItem>
-            <ComboBoxItem>Voor Programmeurs</ComboBoxItem>
-            <ComboBoxItem>Koersen</ComboBoxItem>
+            <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="3">Voor Programmeurs</ComboBoxItem>
+            <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="4">Koersen</ComboBoxItem>
+            <ComboBoxItem PreviewMouseLeftButtonDown="Navigate" Tag="5">Geschiedenis</ComboBoxItem>
         </ComboBox>
         <Button x:Name="ExitButton" Grid.Row="0" Grid.Column="1" Content="Exit" Click="Exit_Application"></Button>
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">

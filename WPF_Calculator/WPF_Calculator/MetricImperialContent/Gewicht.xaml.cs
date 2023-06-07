@@ -40,6 +40,7 @@ namespace WPF_Calculator.MetricImperialContent
             {"Stone", 6350.29 }
         };
 
+        // Switch selection boxes
         public void InvertDirection(object sender, RoutedEventArgs e)
         {
             InvertedDirection = !InvertedDirection;
@@ -87,16 +88,9 @@ namespace WPF_Calculator.MetricImperialContent
 
             LeftComboBox.SelectedIndex = RightSelectedItem;
             RightComboBox.SelectedIndex = LeftSelectedItem;
-            if (OutputBox.Text != "")
-            {
-                InputBox.Text = OutputBox.Text;
-                if (InputBox.Text != "")
-                {
-                    Omzetten();
-                }
-            }
         }
 
+        // Clear output if selection it changed
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (InputBox.Text != "")
@@ -110,6 +104,7 @@ namespace WPF_Calculator.MetricImperialContent
             Omzetten();
         }
 
+        // Calculation function
         private void Omzetten()
         {
             var result = 0.00;
@@ -121,9 +116,11 @@ namespace WPF_Calculator.MetricImperialContent
                     result = Convert.ToDouble(InputBox.Text);
                     var calculationValue = 0.00;
 
+                    // Determine calculation value
                     if (!InvertedDirection) { calculationValue = _imperialValues[LeftComboBox.Text]; }
                     else { calculationValue = _metricValues[LeftComboBox.Text]; }
 
+                    // Caclulate result
 					switch (RightComboBox.Text)
 					{
 						case "Pound":
@@ -148,12 +145,14 @@ namespace WPF_Calculator.MetricImperialContent
 							}
 					}
 
+                    // Check and print result
 					if (Math.Round(result, Decimalen) == 0)
                     {
                         OutputBox.Text = "Te Klein.";
                     }
                     else
                     {
+                        new Repository().insertInDb(1, LeftComboBox.Text, RightComboBox.Text, Convert.ToDouble(InputBox.Text), Math.Round(result, Decimalen));
                         OutputBox.Text = Math.Round(result, Decimalen).ToString();
                     }
                 }
@@ -169,6 +168,7 @@ namespace WPF_Calculator.MetricImperialContent
             }
         }
 
+        // Change decimals
         private void DecimalenInput_Changed(object sender, TextChangedEventArgs e)
         {
             if (ErrorOutput != null)

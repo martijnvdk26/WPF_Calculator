@@ -185,6 +185,7 @@ namespace WPF_Calculator.MetricImperialContent
 					else
 					{
 						OutputBox.Text = Math.Round(result, Decimalen).ToString();
+						new Repository().insertInDb(1, LeftComboBox.Text, RightComboBox.Text, Convert.ToDouble(InputBox.Text), Math.Round(result, Decimalen));
 					}
 				}
 				else

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySqlX.XDevAPI.Common;
 using WPF_Calculator.MetricImperialContent;
 
 namespace WPF_Calculator
@@ -37,9 +39,9 @@ namespace WPF_Calculator
 				double GonInput = 0.00;
 
                 if (double.TryParse(GradenTextBox.Text, out GradenInput) && !double.TryParse(RadialenTextBox.Text, out RadialenInput) && !double.TryParse(GonTextBox.Text, out GonInput))
-                {
+				{
 					Bereken("Graden", GradenInput);
-                } 
+				} 
                 else if (!double.TryParse(GradenTextBox.Text, out GradenInput) && double.TryParse(RadialenTextBox.Text, out RadialenInput) && !double.TryParse(GonTextBox.Text, out GonInput))
                 {
 					Bereken("Radialen", RadialenInput);
@@ -72,18 +74,24 @@ namespace WPF_Calculator
 						RadialenTextBox.Text = Math.Round((value * 0.01745329), Decimalen).ToString();
 						GonTextBox.Text = Math.Round((value * 1.1111), Decimalen).ToString();
 						ErrorOutput.Text = (100 / 90).ToString();
+
+						new Repository().insertInDb(2, type, "Radialen", "Gon", value, Math.Round((value * 0.01745329), Decimalen), Math.Round((value * 1.1111), Decimalen));
 						break;
 					}
 				case "Radialen":
 					{
 						GradenTextBox.Text = Math.Round((value * 57.2958), Decimalen).ToString();
 						GonTextBox.Text = Math.Round((value * 63.662), Decimalen).ToString();
+
+						new Repository().insertInDb(2, type, "Graden", "Gon", value, Math.Round((value * 57.2958), Decimalen), Math.Round((value * 63.662), Decimalen));
 						break;
 					}
 				case "Gon":
 					{
 						GradenTextBox.Text = Math.Round((value / 1.1111), Decimalen).ToString();
 						RadialenTextBox.Text = Math.Round((value * 0.015708), Decimalen).ToString();
+
+						new Repository().insertInDb(2, type, "Graden", "Radialen", value, Math.Round((value / 1.1111), Decimalen), Math.Round((value * 0.015708), Decimalen));
 						break;
 					}
 			}

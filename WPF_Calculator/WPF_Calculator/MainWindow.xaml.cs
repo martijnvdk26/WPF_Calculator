@@ -28,6 +28,12 @@ namespace WPF_Calculator
                 case "2":
                     this.contentControl.Content = new Graden();
                     break;
+                case "3":
+                    this.contentControl.Content = new Programmeurs();
+                    break;
+                case "5":
+                    this.contentControl.Content = new Geschiedenis();
+                    break;
             }
         }
 	}  
